@@ -7,18 +7,27 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            Text("Breaking Bad")
+                .toolbarBackground(.visible, for: .tabBar)
+                .tabItem {
+                    Label("Breaking Bad", systemImage: "tortoise")
+                }
+            
+            Text("Better Call Soul")
+                .toolbarBackground(.visible, for: .tabBar)
+                .tabItem {
+                    Label("Better Call Soul", systemImage: "briefcase")
+                }
         }
-        .padding()
+        .preferredColorScheme(.dark)
+        
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
