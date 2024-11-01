@@ -11,16 +11,16 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            Text("Breaking Bad")
+            QuoteView(show: "Breaking Bad")
                 .toolbarBackground(.visible, for: .tabBar)
                 .tabItem {
                     Label("Breaking Bad", systemImage: "tortoise")
                 }
             
-            Text("Better Call Soul")
+            QuoteView(show: "Better Call Saul")
                 .toolbarBackground(.visible, for: .tabBar)
                 .tabItem {
-                    Label("Better Call Soul", systemImage: "briefcase")
+                    Label("Better Call Saul", systemImage: "briefcase")
                 }
         }
         .preferredColorScheme(.dark)
@@ -28,6 +28,6 @@ struct ContentView: View {
     }
 }
 
-//#Preview {
-//    ContentView()
-//}
+#Preview {
+    ContentView()
+}
